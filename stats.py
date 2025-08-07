@@ -20,3 +20,16 @@ def sort_characters_by_count(char_dict):
     ]
     char_list.sort(key=lambda item: item["num"], reverse=True)
     return char_list
+
+def sort_char_counts(char_counts):
+    sorted_list = []
+
+    for char, count in char_counts.items():
+        sorted_list.append({
+            'char': char,
+            'count': count
+        })
+
+    # Sort the list in place by 'count', descending
+    sorted_list.sort(key=lambda d: d['count'], reverse=True)
+    return sorted_list
